@@ -4,19 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/all.min.css">
     <title>Ahmed Meky</title>
 </head>
 <body>
     <div class="navbar">
         <nav>
-            
+            <div class="logo">
+                <i class="fas fa-user-circle " style="color: #f0f2f4;"></i>
+                <p style="color: #f0f2f4;">Portfolio</p>
+            </div>
+            <ul class="menu">
+                <li>HOME</li>
+                <li>About</li>
+                <li>Projects</li>
+                <li>Skills</li>
+            </ul>
+            <div class="dropdown">
+                <button
+                class="navbar-toggler dropdown"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarToggleExternalContent"
+                aria-controls="navbarToggleExternalContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+                <div class="dropdown-content">
+                  <a href="#">Home</a>
+                  <a href="#">About </a>
+                  <a href="#">Skills</a>
+                  <a href="#">Project</a>
+                </div>
+            </div>
         </nav>
     </div>
     <div class="container">
-        <div class="rightContainer">
+        <div class="MidContainer">
+            <div class="title">FE</div>
+            <p>DEVELOPER</p>
+        </div>
+        <div class="MidContainer">
             <img src="./img/230752325_4245643025515024_243170212169635350_n-removebg-preview (1).png" alt="profile">
+        </div>
+        <div class="MidContainer">
             
-        </div>        
+        </div>
     </div>
+
+    <script src="./js/all.min.js"></script>
+    <script>
+        var Dropdown = document.getElementsByClassName('dropdown')[0];
+        var DropdownContent = document.getElementsByClassName('dropdown-content')[0];
+
+        Dropdown.addEventListener("click", function() {
+            DropdownContent.style.display = "block";
+        });
+
+        document.addEventListener("click", function(event) {
+            var target = event.target;
+            if (!Dropdown.contains(target) && !DropdownContent.contains(target)) {
+                DropdownContent.style.display = "none";
+            }
+        });
+
+        var menuItems = document.querySelectorAll('.menu li');
+
+menuItems.forEach(function(item) {
+  item.addEventListener('click', function() {
+    menuItems.forEach(function(item) {
+      item.classList.remove('selected');
+    });
+    this.classList.add('selected');
+  });
+});
+    </script>
 </body>
 </html>

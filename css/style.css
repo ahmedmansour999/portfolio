@@ -13,7 +13,7 @@
 body {
   width: 98%;
   height: 100%;
-  background-color: #111111;
+  background-color: #1a1a1a;
 }
 
 a{
@@ -131,7 +131,7 @@ a{
     place-content: center;
     grid-auto-flow: column;
     gap: 30px;
-    background: #111111;
+    background-color: #1a1a1a;
     width: 100%;
     justify-content: space-around;
     
@@ -464,10 +464,28 @@ a{
   color: white;
 }
 
-/* About */
+/* social */
 
-  #about{
-    width:100%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* skills */
+
+  #skills{
+    width:99%;
     height: 100%;
     transform-style: preserve-3d;
     overflow:hidden;
@@ -483,18 +501,177 @@ a{
 
  .stage {
   overflow:hidden;
-  background:#000;  
+  background-color: #1a1a1a; 
 }
 
 .stage div, .stage svg {
   position: absolute;
 }
 
-.about {
+.skills {
   perspective: 2000px;
   width: 300px;
   height: 400px;  
   left:50%;
   top:50%;
   transform:translate(-50%,-50%);
+}
+.skills .skillsTitle{
+  color: white;
+  font-weight: bold;
+  font-size: 45px;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 10px;
+  text-align: center;
+  position: relative;
+  top: -27%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.stage .arrow{
+  position: absolute;
+  left: 93%;
+  top: 88%;
+  background-image: linear-gradient(to right, #b7b3b3, #cbc6c9, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  border: 1px solid;
+  width: 45px;
+  box-shadow: 0px 0px 7px 7px #ff0066;
+  height: 45px;
+  color: white;
+  cursor: pointer;
+}
+.stage .arrow svg{
+  font-size: 40px;
+  padding: 2px;
+  color: white;
+  position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.stage .hand{
+  position: absolute;
+  left: 50%;
+  top: 88%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  border: none;
+  width: 45px;
+  height: 45px;
+  color: white;
+}
+.stage .hand svg{
+  font-size: 40px;
+  padding: 2px;
+  color: white;
+  position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.stage .rightarrow{
+  position: absolute;
+  left: 50%;
+  top: 89%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  border: none;
+  width: 45px;
+  height: 45px;
+  color: white;
+  
+  
+}
+.stage .rightarrow svg{
+  font-size: 40px;
+  padding: 2px;
+  color: white;
+  position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: arrowMove 3s infinite;
+}
+
+
+@keyframes arrowMove {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, 0px, 0px);  
+  }
+
+  50% {
+    opacity: 100%;
+    transform: translate3d(150px, 0px, 100px);
+  }
+
+
+  100% {
+    opacity: 0;
+    transform: translate3d(150px, 0px, 0px);
+  }
+}
+.stage .leftarrow{
+  position: absolute;
+  left: 48%;
+  top: 89%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  border: none;
+  width: 45px;
+  height: 45px;
+  color: white;
+  
+  
+}
+.stage .leftarrow svg{
+  font-size: 40px;
+  padding: 2px;
+  color: white;
+  position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: arrowMove2 3s infinite;
+}
+
+
+@keyframes arrowMove2 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, 0px, 0px);  
+  }
+
+  50% {
+    opacity: 100%;
+    transform: translate3d(-150px, 0px, 100px);
+  }
+
+
+  100% {
+    opacity: 0;
+    transform: translate3d(-150px, 0px, 0px);
+  }
+}
+
+.social .abouttitle{
+  color: white;
+  font-weight: bold;
+  font-size: 45px;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 10px;
+  text-align: center;
+
+}
+.social .socialleft{
+  transform: translateX(250px);
+  transition: 3s ease-in;
+  width: fit-content;
 }

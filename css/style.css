@@ -91,7 +91,6 @@ a{
   .dropdown-content {
     display: none;
     position: absolute;
-    min-width: 160px;
     z-index: 1;
     color: aliceblue;
     font-size: 15px;

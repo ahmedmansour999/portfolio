@@ -116,6 +116,9 @@ a{
     cursor: none;
   }
   
+
+
+
 /* End Of Nav Bar style */
 
 
@@ -753,3 +756,12 @@ color : yellow!important
   }
 }
 
+
+
+
+
+@media (max-width: 786px)  {
+    nav .menu{
+      display: none !important;
+    }
+}

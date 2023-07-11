@@ -42,6 +42,53 @@
             </div>
         </nav>
     </div>
+    
+        <!-- mobile container -->
+    <div class="mob" id="mob">
+      <div class="background"></div>
+      <div id="curve" class="card">
+         <div class="footer">
+            <div class="connections">
+                  <div class="connection facebook"><div class="icon"></div></div>
+                  <div class="connection twitter"><div class="icon"></div></div>
+                  <div class="connection behance"><div class="icon"></div></div>
+            </div>
+            <svg id="curve">
+                  <path id="p" d="M0,200 Q80,100 400,200 V150 H0 V50" transform="translate(0 300)" />
+                  <rect id="dummyRect" x="0" y="0" height="450" width="400"
+            fill="transparent" />
+                  <!-- slide up-->
+                  <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,100 400,50 V150 H0 V50" fill="freeze" begin="dummyRect.mouseover" end="dummyRect.mouseout" dur="0.1s" id="bounce1" />
+                  <!-- slide up and curve in -->
+                  <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,0 400,50 V150 H0 V50" fill="freeze" begin="bounce1.end" end="dummyRect.mouseout" dur="0.15s" id="bounce2" />
+                  <!-- slide down and curve in -->
+                  <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,80 400,50 V150 H0 V50" fill="freeze" begin="bounce2.end" end="dummyRect.mouseout" dur="0.15s" id="bounce3" />
+                  <!-- slide down and curve out -->
+                  <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,45 400,50 V150 H0 V50" fill="freeze" begin="bounce3.end" end="dummyRect.mouseout" dur="0.1s" id="bounce4" />
+                  <!-- curve in -->
+                  <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,50 400,50 V150 H0 V50" fill="freeze" begin="bounce4.end" end="dummyRect.mouseout" dur="0.05s" id="bounce5" />
+
+                  <animate xlink:href="#p" attributeName="d" to="M0,200 Q80,100 400,200 V150 H0 V50" fill="freeze" begin="dummyRect.mouseout" dur="0.15s" id="bounceOut" />
+            </svg>
+            <div class="info">
+                  <div class="name">Ahmed Mansour</div>
+                  <div class="job">FRONTEND DEVELOPER</div>
+            </div>
+         </div>
+         <div class="card-blur"></div>
+      </div>
+    </div>
+
+    <div class="mobproject" id="mobproject">
+      <h1>Project</h1>
+      <div class="gallery">
+         <img src="https://picsum.photos/id/174/400/400" alt="a hot air balloon">
+         <img src="https://picsum.photos/id/188/400/400" alt="a sky photo of an old city">
+         <img src="https://picsum.photos/id/221/400/400" alt="a small boat">
+         <img src="https://picsum.photos/id/288/400/400" alt="a forest">
+       </div>
+       <a href="#" > see more</a>
+    </div>
 
 
     <div class="container" id="container">
@@ -64,7 +111,6 @@
 
         </div>
     </div>
-
 
     <div class="project" id="project">
         <h1 class="projectsContainer">Projects</h1>
@@ -220,6 +266,9 @@
     </div>
       
 
+
+
+   
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -141,6 +141,7 @@ a{
 .MidContainer{
   width: 100%;
   height: 100%;
+      transform: translateX(50%);
   
 }
 .MidContainer img {
@@ -185,6 +186,7 @@ a{
   background-color: #ff0066;
   font-family: 'Orbitron', sans-serif;
   text-align: center;
+  display: none;
 }
 
 .rightContainer .name{
@@ -258,6 +260,11 @@ a{
   color: white;
   position: relative;
   font-family: 'Orbitron', sans-serif;
+}
+.leftContainer .newDetails{
+  position: absolute;
+    width: 25rem;
+    left: 73%;
 }
 .leftContainer .developer{
   transform: rotateZ(-90deg);
@@ -430,6 +437,24 @@ a{
   margin-left: 10px;
   color: white;
   white-space: pre;
+}
+.project  button{
+  background: none !important;
+  transform: translate(-27rem, 16rem);
+  padding: 7px;
+  box-shadow: 1px 1px 10px 5px blueviolet;
+}
+.project button a{
+  font-size: 1.1rem;
+}
+
+.options .option:hover .label .info{
+  transform: translateY(-8%);
+  
+}
+.options .option:hover .label .info a{
+  color: #6100bb;
+  
 }
 
 .options .option .label .info > div {

@@ -441,14 +441,21 @@ a{
 }
 .project  button{
   background: none !important;
-  transform: translate(-27rem, 16rem);
+  transform: translate(-43rem, 16rem);
   padding: 7px;
   box-shadow: 1px 1px 10px 5px blueviolet;
+  padding: .7rem;
+  transition: all 200ms ease-in-out;
 }
 .project button a{
   font-size: 1.1rem;
 }
-
+.project .more{
+  transform: translate(-28rem, 16rem);
+}
+.project button:hover{
+  box-shadow: 1px 1px 10px 5px greenyellow;
+}
 .options .option:hover .label .info{
   transform: translateY(-8%);
   
